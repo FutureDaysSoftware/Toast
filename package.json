@@ -1,7 +1,7 @@
 {
   "name": "toast",
   "description": "Module for displaying messages to user",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/ScottAP108/Toast.git"
