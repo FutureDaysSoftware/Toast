@@ -3,8 +3,8 @@ module.exports = Object.assign( {}, require('../../../client/js/views/__proto__'
     name: 'ToastMessage',
 
     Icons: {
-        error: require('../templates/lib/error')(),
-        success: require('../templates/lib/checkmark')()
+        error: require('./templates/lib/error')(),
+        success: require('./templates/lib/checkmark')()
     },
 
     postRender() {
