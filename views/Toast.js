@@ -21,6 +21,6 @@ module.exports = Object.create( Object.assign( {}, require('../../../client/js/v
 
     },
 
-    template: require('../templates/Toast')
+    template: require('./templates/Toast')
 
 } ), { } )

@@ -46,6 +46,6 @@ module.exports = Object.assign( {}, require('../../../client/js/views/__proto__'
         this.resolution()
     },
 
-    template: require('../templates/ToastMessage')
+    template: require('./templates/ToastMessage')
 
 } )
