@@ -1,9 +1,29 @@
 {
-  "name": "toast",
+  "name": "Toast",
   "description": "Module for displaying messages to user",
-  "version": "0.0.3",
+  "engines": {
+    "node": "9.11.1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babelify": "8.0.0",
+    "browserify": "14.5.0",
+    "uglify-js": "^3.3.21",
+    "uuid": "^3.2.1",
+    "view": "git+ssh://git@github.com/FutureDaysSoftware/View.git#slurper"
+  },
+  "license": "private",
+  "main": "dist/bundle.js.gz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ScottAP108/Toast.git"
-  }
+    "url": "https://github.com/FutureDaysSoftware/Toast.git"
+  },
+  "scripts": {
+    "build:js": "browserify views/Toast.js -t [ babelify --presets [ env stage-2 ] ] | uglifyjs > dist/bundle.js && gzip -c dist/bundle.js > dist/bundle.js.gz"
+  },
+  "version": "0.0.5"
 }

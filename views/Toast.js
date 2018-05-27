@@ -1,27 +1,27 @@
-module.exports = Object.create( Object.assign( {}, require('../../../client/js/views/__proto__'), {
+const View = require('view')
 
-    ToastMessage: require('./ToastMessage'),
+module.exports = class Toast extends View {
 
-    name: 'Toast',
+    ToastMessage = require('./ToastMessage')
+
+    name = 'Toast'
 
     postRender() {
         this.messages = { }
-
         return this
-    },
+    }
 
-    requiresLogin: false,
+    requiresLogin = false
 
     createMessage( type, message ) {
-        if( !this.messages[ message ] ) this.messages[ message ] = Object.create( this.ToastMessage, {
-            factory: { value: this.factory },
+        if( !this.messages[ message ] ) this.messages[ message ] = new this.ToastMessage( {
+            Factory: { value: this.Factory },
             insertion: { value: { el: this.els.container } }
-        } ).constructor()
+        } )
 
-        return this.messages[ message ].showMessage( type, message )
+        return this.messages[ message ].showMessage( type, message ).catch( this.Error )
+    }
 
-    },
+    template = require('./templates/Toast')
 
-    template: require('./templates/Toast')
-
-} ), { } )
+}
