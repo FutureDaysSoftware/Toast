@@ -1,4 +1,4 @@
-const View = require('view')
+const View = require('View')
 
 module.exports = class Toast extends View {
 
