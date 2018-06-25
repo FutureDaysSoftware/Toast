@@ -1,9 +1,27 @@
 {
-  "name": "toast",
+  "name": "Toast",
   "description": "Module for displaying messages to user",
-  "version": "0.0.3",
+  "engines": {
+    "node": "9.11.1"
+  },
+  "dependencies": {
+    "View": "git+ssh://git@github.com/FutureDaysSoftware/View.git#master"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "stylus": "^0.54.5"
+  },
+  "license": "private",
+  "main": "dist/js/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ScottAP108/Toast.git"
-  }
+    "url": "https://github.com/FutureDaysSoftware/Toast.git"
+  },
+  "scripts": {
+    "build": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css"
+  },
+  "version": "0.0.5"
 }
