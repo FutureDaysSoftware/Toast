@@ -5,7 +5,7 @@
     "node": "9.11.1"
   },
   "dependencies": {
-    "View": "git+ssh://git@github.com/FutureDaysSoftware/View.git#bundling"
+    "View": "git+ssh://git@github.com/FutureDaysSoftware/View.git#master"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -15,13 +15,13 @@
     "stylus": "^0.54.5"
   },
   "license": "private",
-  "main": "dist/js/Toast.js",
+  "main": "dist/js/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/FutureDaysSoftware/Toast.git"
   },
   "scripts": {
-    "build:dist": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css"
+    "build": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css"
   },
   "version": "0.0.5"
 }
