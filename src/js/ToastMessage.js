@@ -1,4 +1,4 @@
-const View = require('View')
+const View = require('@futuredays/view')
 
 module.exports = class ToastMessage extends View {
 

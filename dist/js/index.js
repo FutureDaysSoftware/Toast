@@ -22,7 +22,7 @@ var _inherits3 = _interopRequireDefault(_inherits2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var View = require('View');
+var View = require('@futuredays/view');
 
 module.exports = function (_View) {
     (0, _inherits3.default)(Toast, _View);

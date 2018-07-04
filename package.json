@@ -1,11 +1,11 @@
 {
-  "name": "Toast",
+  "name": "@futuredays/toast",
   "description": "Module for displaying messages to user",
   "engines": {
     "node": "9.11.1"
   },
   "dependencies": {
-    "View": "git+ssh://git@github.com/FutureDaysSoftware/View.git#master"
+    "@futuredays/view": "1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -23,5 +23,5 @@
   "scripts": {
     "build": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css"
   },
-  "version": "0.0.5"
+  "version": "1.0.0"
 }
