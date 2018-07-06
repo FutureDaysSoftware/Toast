@@ -21,7 +21,8 @@
     "url": "https://github.com/FutureDaysSoftware/Toast.git"
   },
   "scripts": {
-    "build": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css"
+    "build": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css",
+    "postversion": "git push && git push --tags"
   },
   "version": "1.0.1"
 }
