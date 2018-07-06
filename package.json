@@ -23,5 +23,5 @@
   "scripts": {
     "build": "babel src/js -d dist/js && stylus src/stylus/Toast.styl -o dist/css/Toast.css"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
