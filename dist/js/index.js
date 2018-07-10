@@ -28,17 +28,19 @@ module.exports = function (_View) {
     (0, _inherits3.default)(Toast, _View);
 
     function Toast() {
-        var _ref;
+        var _ret;
 
-        var _temp, _this, _ret;
-
+        var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
         (0, _classCallCheck3.default)(this, Toast);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
+        var _this = (0, _possibleConstructorReturn3.default)(this, (Toast.__proto__ || (0, _getPrototypeOf2.default)(Toast)).call(this));
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Toast.__proto__ || (0, _getPrototypeOf2.default)(Toast)).call.apply(_ref, [this].concat(args))), _this), _this.ToastMessage = require('./ToastMessage'), _this.name = 'Toast', _this.requiresLogin = false, _this.template = require('./templates/Toast'), _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        _this.ToastMessage = require('./ToastMessage');
+        _this.name = 'Toast';
+        _this.requiresLogin = false;
+        _this.template = require('./templates/Toast');
+
+        return _ret = _this.initialize(opts), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
     (0, _createClass3.default)(Toast, [{
@@ -51,7 +53,7 @@ module.exports = function (_View) {
         key: 'createMessage',
         value: function createMessage(type, message) {
             if (!this.messages[message]) this.messages[message] = new this.ToastMessage({
-                Factory: { value: this.Factory },
+                range: { value: this.range },
                 insertion: { value: { el: this.els.container } }
             });
 

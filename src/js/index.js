@@ -2,6 +2,11 @@ const View = require('@futuredays/view')
 
 module.exports = class Toast extends View {
 
+    constructor( opts ={} ) {
+        super()
+        return this.initialize( opts )
+    }
+
     ToastMessage = require('./ToastMessage')
 
     name = 'Toast'
@@ -15,7 +20,7 @@ module.exports = class Toast extends View {
 
     createMessage( type, message ) {
         if( !this.messages[ message ] ) this.messages[ message ] = new this.ToastMessage( {
-            Factory: { value: this.Factory },
+            range: { value: this.range },
             insertion: { value: { el: this.els.container } }
         } )
 

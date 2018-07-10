@@ -36,26 +36,28 @@ module.exports = function (_View) {
     (0, _inherits3.default)(ToastMessage, _View);
 
     function ToastMessage() {
-        var _ref;
+        var _ret;
 
-        var _temp, _this, _ret;
-
+        var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
         (0, _classCallCheck3.default)(this, ToastMessage);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
+        var _this = (0, _possibleConstructorReturn3.default)(this, (ToastMessage.__proto__ || (0, _getPrototypeOf2.default)(ToastMessage)).call(this));
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = ToastMessage.__proto__ || (0, _getPrototypeOf2.default)(ToastMessage)).call.apply(_ref, [this].concat(args))), _this), _this.name = 'ToastMessage', _this.Icons = {
+        _this.name = 'ToastMessage';
+        _this.Icons = {
             error: require('./templates/lib/error')(),
             success: require('./templates/lib/checkmark')()
-        }, _this.requiresLogin = false, _this.template = require('./templates/ToastMessage'), _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        };
+        _this.requiresLogin = false;
+        _this.template = require('./templates/ToastMessage');
+
+        return _ret = _this.initialize(opts), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
     (0, _createClass3.default)(ToastMessage, [{
         key: 'showMessage',
         value: function () {
-            var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(type, message) {
+            var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(type, message) {
                 return _regenerator2.default.wrap(function _callee$(_context) {
                     while (1) {
                         switch (_context.prev = _context.next) {
@@ -95,8 +97,8 @@ module.exports = function (_View) {
                 }, _callee, this);
             }));
 
-            function showMessage(_x, _x2) {
-                return _ref2.apply(this, arguments);
+            function showMessage(_x2, _x3) {
+                return _ref.apply(this, arguments);
             }
 
             return showMessage;

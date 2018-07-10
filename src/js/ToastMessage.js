@@ -2,6 +2,11 @@ const View = require('@futuredays/view')
 
 module.exports = class ToastMessage extends View {
 
+    constructor( opts ={} ) {
+        super()
+        return this.initialize( opts )
+    }
+
     name = 'ToastMessage'
 
     Icons = {
